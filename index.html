@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
 </head>
 <body>
     
@@ -20,7 +20,7 @@
 
     <section>
         
-        <select>
+        <select class="operator">
             <option value="plus">+</option>
             <option value="minus">-</option>
         </select>
@@ -33,12 +33,14 @@
     </section>
 
     <section>
-        <div>
-            <div class="incomeList"></div>
-        </div>
-        <div>
-            <div class="costsList"></div>
-        </div>
+        <h2>Income</h2>
+        <ul class="incomeList">
+            
+        </ul>
+        <h2>Costs</h2>
+        <ul class="costsList">
+            
+        </ul>
     </section>
     
 </body>
