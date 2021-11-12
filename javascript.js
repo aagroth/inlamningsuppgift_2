@@ -1,6 +1,8 @@
 // Declaration of both lists
 const incomeList = [];
 const costsList = [];
+var sumValue = 0;
+
 
 // Function that adds both description and value input and put it in to incomeList or costsList
 // It will depend on if the user choose "+" or "-". Each time a user use both inputs
@@ -13,7 +15,7 @@ function addDescriptionAndValue(event) {
     var operator = document.querySelector(".operator").value
 
     if(inputText == "" || inputNumber == "") {
-        alert("Write something to add")
+        alert("Write something to add a post.")
     }
 
     else {
@@ -24,14 +26,21 @@ function addDescriptionAndValue(event) {
             
             var list = document.querySelector(".incomeList")
             list.appendChild(createListElement(obj))
+            
+            sumValue += obj.value 
         }
 
         else if (operator == "minus") {
             costsList.push(obj)
             var list = document.querySelector(".costsList")
             list.appendChild(createListElement(obj))
+
+            sumValue -= obj.value 
         }
-    }  
+
+        const totalSum = document.querySelector(".resultOfLists")
+        totalSum.textContent = sumValue
+    } 
 }
 
 // Activates the function on click
