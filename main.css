@@ -1,13 +1,142 @@
 /* Color theme for the website */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
 body {
-  background-color: #17ddb3; }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); }
 
-h1, h2, p {
-  font-family: "Roboto", sans-serif; }
+h1, h2, p, li, .resultOfLists, input, select, option {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em; }
+
+.headingContainer {
+  height: 100px;
+  z-index: 99;
+  text-align: center; }
+  .headingContainer h1 {
+    text-align: center;
+    color: black;
+    margin-top: 150;
+    z-index: 100;
+    font: 16px/1.25 'Raleway', sans-serif;
+    animation: text-shadow 1.5s ease-in-out infinite;
+    font-size: 3em;
+    font-weight: 900;
+    line-height: 1; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row; }
+  .container img {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 25px 0px 0px 25px; }
+  .container .inputContainer {
+    width: 400px;
+    height: 470px;
+    background-color: #161616;
+    padding-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0px 25px 25px 0px; }
+    .container .inputContainer h2 {
+      z-index: 105;
+      color: white;
+      text-align: center; }
+    .container .inputContainer .resultOfLists {
+      z-index: 105;
+      color: white;
+      text-align: center;
+      margin-bottom: 30px; }
+    .container .inputContainer .inputDescription {
+      border-radius: 5px;
+      height: 30px;
+      z-index: 102;
+      margin-bottom: 30px;
+      margin-left: 70px;
+      width: 250px; }
+    .container .inputContainer .inputInner .operator {
+      height: 34px;
+      border-radius: 5px;
+      z-index: 102;
+      margin-left: 70px;
+      width: 40px; }
+    .container .inputContainer .inputInner .inputValue {
+      border-radius: 5px;
+      height: 30px;
+      width: 205px;
+      z-index: 102;
+      margin-bottom: 30px; }
+
+.listHeadingContainer {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 50px; }
+
+.listContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row; }
+  .listContainer .incomeList {
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-right: 20px;
+    padding: 20px 20px 20px;
+    list-style: none;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-radius: 25px;
+    color: #008f00; }
+  .listContainer .incomeList::-webkit-scrollbar {
+    display: none; }
+  .listContainer .costsList {
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 20px;
+    padding: 20px 20px 20px;
+    list-style: none;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-radius: 25px;
+    color: red; }
+  .listContainer .costsList::-webkit-scrollbar {
+    display: none; }
+
+@media only screen and (max-width: 799px) {
+  .container img {
+    display: none; }
+  .container .inputContainer {
+    border-radius: 25px; }
+  .listContainer {
+    align-items: center;
+    flex-direction: column; }
+    .listContainer .incomeList {
+      margin-right: 0px; }
+    .listContainer .costsList {
+      margin-left: 0px; } }
+
+.addValueToList {
+  margin-left: 30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: 0.8s ease;
+  background-color: #ffdb2b;
+  color: #202020;
+  border-color: #e39111;
+  border-width: thick;
+  font-size: 1.5rem;
+  z-index: 102;
+  margin-left: 150px; }
+  .addValueToList:focus {
+    transform: rotateY(360deg); }

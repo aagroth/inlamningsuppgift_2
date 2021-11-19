@@ -9,39 +9,55 @@
     <script src="javascript.js" defer></script>
 </head>
 <body>
-    
-    <header>
-        <h1 class="heading">Kalkylatorn</h1>
+   
+    <!-- Container with a header -->
+    <header class="headingContainer">
+        
+        <h1 class="heading">SavingsHelper!</h1>
+
     </header>
 
-    <section>
-        <h2>Resultat</h2>
-        <div class="resultOfLists"></div>
+    <!-- Section which include the image and a form -->
+    <section class="container">
+        <div class="imgContainer">
+
+            <img src="img/coins_new.png" alt="Picture of coins">
+
+        </div>
+
+        <form class="inputContainer">
+
+            <h2>Total:</h2>
+            <div class="resultOfLists">0</div>
+            
+            <input class="inputDescription">
+    
+            <div class="inputInner">
+                <select class="operator">
+                    <option value="plus">+</option>
+                    <option value="minus">-</option>
+                </select>
+                <input class="inputValue">
+            </div>
+    
+            <button class="addValueToList">Add</button>
+
+        </form>
     </section>
 
-    <section>
+    <!-- Section which include two different ul-lists -->
+    <section class="listHeadingContainer">
+        <h2>Lists of income and costs</h2>
+    </section>
+
+    <section class="listContainer">
         
-        <select class="operator">
-            <option value="plus">+</option>
-            <option value="minus">-</option>
-        </select>
-
-        <input class="inputDescription">
-        <input class="inputValue">
-
-        <button class="addValueToList">Add</button>
-
-    </section>
-
-    <section>
-        <h2>Income</h2>
         <ul class="incomeList">
-            
         </ul>
-        <h2>Costs</h2>
+
         <ul class="costsList">
-            
         </ul>
+
     </section>
     
 </body>

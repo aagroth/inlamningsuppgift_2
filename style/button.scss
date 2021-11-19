@@ -1,0 +1,19 @@
+ /* Settings for the ADD button. Which include a transformation when the user "clicks" on the button */
+ .addValueToList {
+    margin-left: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: 0.8s ease;
+    background-color: $btn-color;
+    color: #202020;
+    border-color: rgb(227, 145, 17);
+    border-width: thick;
+    font-size: 1.5rem;
+    z-index: 102;
+    margin-left: 150px;
+
+    &:focus {
+        transform: rotateY(360deg);
+    }
+}

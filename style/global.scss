@@ -1,17 +1,183 @@
-
-
-* {
-    box-sizing: border-box;
+/* Style for body. The background is imported from variables.scss */
+body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background: $background-color;
+
 }
 
-body {
-    background-color: $background-color;
-}
-
-h1, h2, p, li, .resultOfLists{
+/* Global fontsize and fontfamily */
+h1, h2, p, li, .resultOfLists, input, select, option{
     font-family: $global-font;
+    font-size: 1.5em;
 }
+
+/* Settings for header with h1. The h1 has a different font-family and is imported in main.scss */
+.headingContainer {
+    height: 100px;
+    z-index: 99;
+    text-align: center;
+
+    h1 {
+        text-align:center;
+        color: black;
+        margin-top: 150;
+        z-index: 100; 
+        font: 16px/1.25 'Raleway', sans-serif;  
+        animation: text-shadow 1.5s ease-in-out infinite;
+        font-size: 3em;
+        font-weight: 900;
+        line-height: 1;    
+    }   
+}
+
+/* Container is two different div which is combined in desktopMODE. The container is using flex. */
+.container {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+   
+    img {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 25px 0px 0px 25px;
+    }
+    
+    .inputContainer {
+        
+        width: 400px;
+        height: 470px;
+        background-color: rgb(22, 22, 22);
+        padding-top: 30px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 0px 25px 25px 0px;
+
+        h2 {
+            z-index: 105;
+            color: white;
+            text-align: center;
+        }
+        
+        .resultOfLists {
+            z-index: 105;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        } 
+        
+        .inputDescription{
+            border-radius: 5px;
+            height: 30px;
+            z-index: 102;
+            margin-bottom: 30px;
+            margin-left: 70px;
+            width: 250px;
+        }
+    
+        .inputInner {
+    
+            .operator {
+                height: 34px;
+                border-radius: 5px;
+                z-index: 102;
+                margin-left: 70px;
+                width: 40px;
+            }
+         
+            .inputValue {       
+                border-radius: 5px;
+                height: 30px;
+                width: 205px;
+                z-index: 102;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.listHeadingContainer {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+
+/* The listContainer is two default white boxes. The input inside both lists are later added by the user
+   with the help of Javascript. incomstList will be shown with green number/text and costsList will be shown with red.*/
+.listContainer {
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    .incomeList {
+        height: 400px;
+        width: 300px;
+        background-color: white;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-right: 20px;
+        padding: 20px 20px 20px;
+        list-style: none;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        border-radius: 25px;
+        color: rgb(0, 143, 0);
+    }
+
+    .incomeList::-webkit-scrollbar {
+        display: none;
+    }
+
+    .costsList {
+        height: 400px;
+        width: 300px;
+        background-color: white;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-left: 20px;
+        padding: 20px 20px 20px;
+        list-style: none;  
+        overflow: scroll; 
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        border-radius: 25px; 
+        color:red;
+    }
+
+    .costsList::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* MediaQueries for both container and list container. The result of the querys is that the img in container does not
+   display while in mobile/padMODE and the two lists will be shown in a column instead of a row. */
+
+@media only screen and (max-width: 799px) {
+    .container {
+        img {
+            display: none;
+        }
+        .inputContainer {
+            border-radius: 25px;
+        }
+    }
+
+    .listContainer {
+
+        align-items: center;
+        flex-direction: column;
+
+        .incomeList {
+            margin-right: 0px;
+        }
+
+        .costsList {
+            margin-left: 0px;
+        }
+    }
+}
+
 
 

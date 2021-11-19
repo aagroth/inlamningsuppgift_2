@@ -1,4 +1,4 @@
-// Declaration of both lists
+// Declaration of both lists and sumValue for the total.
 const incomeList = [];
 const costsList = [];
 var sumValue = 0;
@@ -7,6 +7,7 @@ var sumValue = 0;
 // Function that adds both description and value input and put it in to incomeList or costsList
 // It will depend on if the user choose "+" or "-". Each time a user use both inputs
 // the function will create a object with the variable inputText and inputNumber.
+// The function will also either + or - the value to the sumValue.
 function addDescriptionAndValue(event) {
     event.preventDefault();
 
